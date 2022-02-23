@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { render } from "react-dom";
 import {
@@ -21,15 +20,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/product" element={<Product />} />
-        <Route path="/chekout" element={<Checkout />}>Chekout</Route>
-      </Routes>
-    </BrowserRouter>
-    <Header />
-    <Products />
+          <Route path="/chekout" element={<Checkout />}>Chekout</Route>
+        </Routes>
+      </BrowserRouter>
+      <Header />
+      <Products />
+      <Footer />
 
 
 
-      
+
 
     </div >
   );
