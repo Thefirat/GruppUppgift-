@@ -19,13 +19,18 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Header />
+    
         <Routes>
-          <Route path="/product" element={<Product />} />
+        <Route path="/" element={<Products/>}>Chekout</Route>
+        <Route path="/product" element={<Product />} />
         <Route path="/chekout" element={<Checkout />}>Chekout</Route>
       </Routes>
+
+      <Footer/>
     </BrowserRouter>
-    <Header />
-    <Products />
+
+  
 
 
 
