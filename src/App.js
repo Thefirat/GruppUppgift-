@@ -22,9 +22,9 @@ function App() {
       <Header />
     
         <Routes>
-        <Route path="/" element={<Products/>}>Chekout</Route>
+        <Route path="/" element={<Products/>}></Route>
         <Route path="/product" element={<Product />} />
-        <Route path="/chekout" element={<Checkout />}>Chekout</Route>
+        <Route path="/checkout" element={<Checkout />}>Chekout</Route>
       </Routes>
 
       <Footer/>

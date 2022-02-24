@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import {Link} from "react-router-dom"
 
 
 function Products() {
@@ -23,17 +24,17 @@ useEffect(() => {
 
 
 return (
-    <div>
-      <h1>Products</h1>
+    <div className="products-container">
       {
         products.map(product => (
-          <article>
-            <img src={product.url}></img>
-            <p>{product.title}</p>
-            <p>{product.price}</p>
+          <section className="section">
+            <img className="img" src={product.url}></img>
+            <h2>{product.title}</h2>
+            <h4>{product.price} Kr</h4>
+            <input type ="number" min="1" max="10" placeholder="quantity"></input>
             <button>Add to Cart</button>
-            <Link to={`"/product"${product.id}`}>About</Link>
-          </article>
+           <Link to={`/product ${product.id}`}>About</Link> 
+          </section>
         )
 
         )
