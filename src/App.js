@@ -18,15 +18,19 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/product" element={<Product />} />
-          <Route path="/chekout" element={<Checkout />}>Chekout</Route>
-        </Routes>
-      </BrowserRouter>
       <Header />
-      <Products />
-      <Footer />
+    
+        
+        <Routes>
+        <Route path="/" element={<Products/>}>Chekout</Route>
+        <Route path="/product/:para" element={<Product />} />
+        <Route path="/chekout" element={<Checkout />}>Chekout</Route>
+      </Routes>
+    </BrowserRouter>
 
+    <Footer/>
+
+  
 
 
 
