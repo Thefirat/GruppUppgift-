@@ -1,5 +1,16 @@
 img{
-    width: 500px;
+    width: 450px;
     height: auto;
 }
 
+.product-add{
+   text-align: center;
+}
+
+.desc-add{
+    display: grid;
+    margin-top: 50px;
+    width: 500px;
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+}

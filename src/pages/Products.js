@@ -29,12 +29,12 @@ return (
       {
         products.map(product => (
           <section className="section">
-            <img className="img" src={product.url}></img>
+           <Link to={`/product/${product.id}`}> <img className="img" src={product.url} alt={product.title}></img></Link>
             <h2>{product.title}</h2>
             <h4>{product.price} Kr</h4>
             <input type ="number" min="1" max="10" placeholder="quantity"></input>
             <button>Add to Cart</button>
-           <Link to={`/product/${product.id}`}>About</Link> 
+           
            
           </section>
         )
