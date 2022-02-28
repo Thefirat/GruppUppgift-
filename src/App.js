@@ -13,6 +13,8 @@ import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Products from './pages/Products';
+import Cart from './components/Cart';
+
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Products/>}></Route>
         <Route path="/product" element={<Product />} />
-        <Route path="/checkout" element={<Checkout />}>Chekout</Route>
+        <Route path="/checkout" element={<Checkout />}>Checkout</Route>
       </Routes>
 
       <Footer/>
