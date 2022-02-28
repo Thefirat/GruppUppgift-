@@ -1,11 +1,6 @@
-
-
-
-
-
 .products-container{
     display: grid;
-    margin-top: 50px;
+    margin-top: 80px;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 

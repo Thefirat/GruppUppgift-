@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import { render } from "react-dom";
 import {
   BrowserRouter,
   Routes,
@@ -25,8 +23,8 @@ function App() {
     
         <Routes>
         <Route path="/" element={<Products/>}></Route>
-        <Route path="/product" element={<Product />} />
-        <Route path="/checkout" element={<Checkout />}>Checkout</Route>
+        <Route path="/product/:wie" element={<Product />} />
+        <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>
 
       <Footer/>
