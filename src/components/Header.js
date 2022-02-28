@@ -10,7 +10,7 @@ function Header() {
         <div class="container">
         <Link to="/"><h1 class="logo">G-Seven Tech</h1></Link>
           <div class="header-bar">
-              <Link to="/checkout" class="slider-menu"><FaShoppingCart /></Link>
+              <Link to="/Checkout" class="slider-menu"><FaShoppingCart /></Link>
           </div>
         </div>
 
