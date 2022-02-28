@@ -1,93 +1,83 @@
 import React from 'react'
+import '../Style/footer.css'
+
 
 function Footer() {
   return (
   <footer class="footer">
   <div class="footer__addr">
     <h1 class="footer__logo">F & L Tech</h1>
-        
-    <h2>Contact</h2>
-    
-    <address>
-      5534 Somewhere In. The World 22193-10212
-    </address>
-  </div>
-  
+  </div>  
   <ul class="footer__nav">
     <li class="nav__item">
-      <h2 class="nav__title">Media</h2>
+      <h2 class="nav__title">rubrik1</h2>
 
       <ul class="nav__ul">
         <li>
-          <a href="#">Online</a>
+          <a>2</a>
         </li>
 
         <li>
-          <a href="#">Print</a>
+          <a>3</a>
         </li>
             
         <li>
-          <a href="#">Alternative Ads</a>
+          <a>4</a>
         </li>
       </ul>
     </li>
     
     <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Technology</h2>
+      <h2 class="nav__title">Rubrik2</h2>
       
       <ul class="nav__ul nav__ul--extra">
         <li>
-          <a href="#">Hardware Design</a>
+          <a>1</a>
         </li>
         
         <li>
-          <a href="#">Software Design</a>
+          <a>2</a>
         </li>
         
         <li>
-          <a href="#">Digital Signage</a>
+          <a>3</a>
         </li>
         
         <li>
-          <a href="#">Automation</a>
+          <a>4</a>
         </li>
         
         <li>
-          <a href="#">Artificial Intelligence</a>
+          <a>5</a>
         </li>
         
         <li>
-          <a href="#">IoT</a>
+          <a>6</a>
         </li>
       </ul>
     </li>
     
     <li class="nav__item">
-      <h2 class="nav__title">Legal</h2>
+      <h2 class="nav__title">Contact</h2>
       
       <ul class="nav__ul">
         <li>
-          <a href="#">Privacy Policy</a>
+          <a>    
+           <address>
+           Gustavslundsvägen 151 D, 167 51 Bromma
+           </address>
+          </a>
         </li>
-        
         <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        
-        <li>
-          <a href="#">Sitemap</a>
+          <a>    
+            <div class="legal">
+            <p>&copy; 2022</p>
+             </div>
+          </a>
         </li>
       </ul>
     </li>
   </ul>
-  
-  <div class="legal">
-    <p>&copy; 2022</p>
-    
-    <div class="legal__links">
-      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
-    </div>
-  </div>
 </footer>
   )
 }

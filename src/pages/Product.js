@@ -1,5 +1,7 @@
+import '../Style/product.css'
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
+
 
 
 function Product() {
@@ -8,9 +10,9 @@ function Product() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://codexplained.se/electronics.php?id=' + params.para);
+            const response = await fetch('https://codexplained.se/electronics.php?id=' + params.wie);
             const data = await response.json();
-            console.log(params);
+            console.log(data);
 
             setproduct(data);
         } catch(error) {
@@ -20,19 +22,19 @@ function Product() {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    },[]);
 
 
     return (
-        <section className='firat'>
-           <img src={product.url}></img>
+        <div className='product-container'>
+            <h1>Product: {product.wie}</h1>
+            <img src={product.url}></img>
             <h2>{product.title}</h2>
             <p>{product.description}</p>
             <p>Price:{product.price}</p>
             <p>Storage:{product.storage}</p>
-        </section>
+        </div>
     )
 }
 
 export default Product
-

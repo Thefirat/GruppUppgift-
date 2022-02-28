@@ -1,5 +1,4 @@
 import './App.css';
-import { render } from "react-dom";
 import {
   BrowserRouter,
   Routes,
@@ -20,20 +19,20 @@ function App() {
       <BrowserRouter>
       <Header />
     
-        
         <Routes>
-        <Route path="/" element={<Products/>}>Chekout</Route>
-        <Route path="/product/:para" element={<Product />} />
-        <Route path="/chekout" element={<Checkout />}>Chekout</Route>
+        <Route path="/" element={<Products/>}></Route>
+        <Route path="/product/:wie" element={<Product />} />
+        <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>
-    </BrowserRouter>
 
-    <Footer/>
+      <Footer/>
+    </BrowserRouter>
 
   
 
 
 
+      
 
     </div >
   );
