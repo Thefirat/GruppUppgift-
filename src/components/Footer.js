@@ -6,7 +6,7 @@ function Footer() {
   return (
   <footer class="footer">
   <div class="footer__addr">
-    <h1 class="footer__logo">F & L Tech</h1>
+    <h1 class="footer__logo">G-Seven Tech</h1>
   </div>  
   <ul class="footer__nav">
     <li class="nav__item">
