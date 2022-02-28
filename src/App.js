@@ -11,6 +11,8 @@ import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Products from './pages/Products';
+import Cart from './components/Cart';
+
 
 
 function App() {

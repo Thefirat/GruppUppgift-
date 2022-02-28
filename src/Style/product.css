@@ -1,6 +1,7 @@
 img{
     width: 450px;
     height: auto;
+    margin-top: 160px;
 }
 
 .product-add{
@@ -8,9 +9,8 @@ img{
 }
 
 .desc-add{
-    display: grid;
-    margin-top: 50px;
-    width: 500px;
-    height: auto;
-    grid-template-columns: repeat(3, 1fr);
+    width: 200px;
+    margin: 0 auto;
 }
+
+

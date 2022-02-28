@@ -1,85 +1,43 @@
 import React from 'react'
 import '../Style/footer.css'
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 
 function Footer() {
   return (
-  <footer class="footer">
-  <div class="footer__addr">
-    <h1 class="footer__logo">G-Seven Tech</h1>
-  </div>  
-  <ul class="footer__nav">
-    <li class="nav__item">
-      <h2 class="nav__title">rubrik1</h2>
-
-      <ul class="nav__ul">
-        <li>
-          <a>2</a>
-        </li>
-
-        <li>
-          <a>3</a>
-        </li>
-            
-        <li>
-          <a>4</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Rubrik2</h2>
+    <footer className='footer-container'>
+      <h3 className='logo'>G-Seven Tech</h3>
+      <div className='about'>
+        <h4>About us</h4>
+        <p className='text'>
+        Today we are one of Sweden's largest growing e-commerce in electronics.
+         G-Seven Tech Sweden belongs to the Stockholm Group, 
+         which is Europe's largest electronics chain with over 1000 customers in 15 European countries.
+        </p>
+      </div>
+      <div className='contact'>
+        <h4>Contact</h4>
+        
+          <div className='social'>
+          <a href='https://sv-se.facebook.com/'><FaFacebook/></a>
+          <a href='https://www.instagram.com/'><FaInstagram/></a>
+          <a href='https://www.youtube.com/watch?v=WnBP8sIUShg'><FaYoutube/></a>
+          </div>
       
-      <ul class="nav__ul nav__ul--extra">
-        <li>
-          <a>1</a>
-        </li>
-        
-        <li>
-          <a>2</a>
-        </li>
-        
-        <li>
-          <a>3</a>
-        </li>
-        
-        <li>
-          <a>4</a>
-        </li>
-        
-        <li>
-          <a>5</a>
-        </li>
-        
-        <li>
-          <a>6</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item">
-      <h2 class="nav__title">Contact</h2>
-      
-      <ul class="nav__ul">
-        <li>
-          <a>    
-           <address>
-           Gustavslundsvägen 151 D, 167 51 Bromma
-           </address>
-          </a>
-        </li>
-        <li>
-          <a>    
-            <div class="legal">
-            <p>&copy; 2022</p>
-             </div>
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</footer>
+      </div>
+      <div className='address'>
+        <h4>Address</h4>
+           <p> Gustavslundsvägen 151 D, 167 51 Bromma</p>
+           <p>&copy; 2022</p>
+      </div>
+
+
+    </footer>
   )
+
 }
+    
 
 export default Footer

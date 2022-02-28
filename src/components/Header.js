@@ -8,13 +8,13 @@ function Header() {
     <div>
       <div>
         <div class="container">
-        <Link to="/"><h1 class="logo">G-Seven Tech</h1></Link>
           <div class="header-bar">
-              <Link to="/Checkout" class="slider-menu"><FaShoppingCart /></Link>
+            <Link to="/"><h1 class="logo">G-Seven Tech</h1></Link>
+            <Link to="/Checkout" class="slider-menu"><FaShoppingCart /></Link>
           </div>
         </div>
 
-        
+
       </div>
 
     </div>

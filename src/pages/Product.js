@@ -26,16 +26,14 @@ function Product() {
 
 
     return (
-        <div>
-           <div className='product-add'>
-            <h1>Product: {product.wie}</h1>
+           <section className='product-add'>
             <img className='img-add' alt='Bild' src={product.url}></img>
-            <h2>{product.title}</h2>
+            <h1 className='title-add'>{product.title}</h1>
             <p className='desc-add'>{product.description}</p>
-            <p>Price:{product.price}</p>
-            <p>Storage:{product.storage}</p>
-           </div>
-        </div>
+            <h2 className='price-add'>Price:{product.price}</h2>
+            <h3 className='storage-add'>Storage:{product.storage}</h3>
+            <button>Add to Cart</button>
+           </section>
     )
 }
 

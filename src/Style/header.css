@@ -1,8 +1,8 @@
 html, body {
 	height: 25%;
-	margin: 1rem;
+	margin: 0;
     background-repeat: no-repeat;
-	background-image: linear-gradient(to bottom right, rgb(224, 121, 183), rgb(219, 49, 160), rgb(218, 5, 143) );
+	background-image: linear-gradient(to bottom,rgb(250, 243, 247), rgb(248, 240, 245), rgb(204, 193, 201), rgb(131, 126, 129) );
 }
 .container {
 	height: 100%;
@@ -12,7 +12,7 @@ html, body {
 	flex-direction: column;
 	color: rgb(245, 235, 235);
 }
-.lead { font-family: 'Quicksand'; }
+
 .header-bar {
 	position: relative;
 	width: 70%;
@@ -38,13 +38,14 @@ html, body {
 }
 
 
+
 .header-bar > .logo {
 	position: absolute;
 	top: calc(50% - 20px);
 	left: 10px;
 	transform: translateY(-50%);
-	color: #fffc;
-	font-family: 'Parisienne', cursive;
+	color: rgba(240, 230, 230, 0.8);
+	font-family: 'Parisienne';
 	cursor: default;
 	user-select: none;
 }
@@ -54,18 +55,4 @@ html, body {
 	right: 1rem;
 	display: flex;
 	
-}
-
-
-.aeu-signature {
-	position: fixed;
-	top: 7.5rem;
-	right: 2rem;
-	transform: translate(-50%);
-	font-size: 15px;
-	line-height: 30px;
-	background-color: #fff;
-	padding: 5px 10px;
-	border-radius: 15px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
