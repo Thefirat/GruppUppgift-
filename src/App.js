@@ -1,28 +1,39 @@
+import React, { useState } from "react"
 import './App.css';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-
-import React from 'react';
 import Footer from './components/Footer';
 import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Products from './pages/Products';
-import Cart from './components/Cart';
+
 
 
 
 function App() {
+const [items, setItems] =useState([]);
+
+const addProduct = (newItem) => {
+setItems([
+  ...items,
+  newItem
+
+]);
+
+}
+
+
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+      <Header items={items}/>
     
         <Routes>
-        <Route path="/" element={<Products/>}></Route>
+        <Route path="/" element={<Products addProduct={addProduct}/>}></Route>
         <Route path="/product/:wie" element={<Product />} />
         <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>

@@ -1,42 +1,44 @@
 import React, { useEffect, useState } from "react"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import '../Style/products.css'
 
 
-function Products() {
-const[products, setproducts] = useState([]);
+function Products({ addProduct }) {
+  const [products, setproducts] = useState([]);
 
-const fetchData = async () => {
-  try{
-    const response = await fetch('https://codexplained.se/electronics.php');
-    const data = await response.json();
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://codexplained.se/electronics.php');
+      const data = await response.json();
 
-  setproducts(data);
-  }catch(error){
+      setproducts(data);
+    } catch (error) {
 
+    }
   }
-}
 
-useEffect(() => {
-  fetchData();
-},[]);
-
+  useEffect(() => {
+    fetchData();
+  }, []);
 
 
+  const handleClick = (product) => {
+    addProduct(product)
+  }
 
 
-return (
+  return (
     <div className="products-container">
       {
         products.map(product => (
-          <section className="section">
-           <Link to={`/product/${product.id}`}> <img className="img" src={product.url} alt={product.title}></img></Link>
+          <section key={product.id}className="section">
+            <Link to={`/product/${product.id}`}> <img className="img" src={product.url} alt={product.title}></img></Link>
             <h2>{product.title}</h2>
             <h4>{product.price} Kr</h4>
-            <input type ="number" min="1" max="10" placeholder="quantity"></input>
-            <button>Add to Cart</button>
-           
-           
+            <input type="number" min="1" max="10" placeholder="quantity"></input>
+            <button onClick={() => handleClick(product)}>Add to Cart</button>
+
+
           </section>
         )
 
@@ -47,3 +49,6 @@ return (
 }
 
 export default Products
+
+
+

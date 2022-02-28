@@ -3,25 +3,3 @@
 
 
 
-.products-container{
-    display: grid;
-    margin-top: 50px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-
-}
-
-.section{
-	display: grid;
-	align-items: center;
-	justify-content: center;
-}
-
-.img{
-    height: 300px;
-    width: 300px;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    object-fit: cover;
-    
-}
