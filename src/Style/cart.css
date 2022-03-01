@@ -4,7 +4,7 @@
     right: 0;
     height: 100%;
     transition: 500ms;
-    
+    /* transform: translateX(100%);  */ 
     overflow: scroll; 
     background-color: rgb(245, 250, 252);
     color: rosybrown;
