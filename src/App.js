@@ -40,9 +40,11 @@ setItems([
         <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
         <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>
-      <Checkout />
+      
       <Footer/>     
     </BrowserRouter>
+
+   
 
   
 
