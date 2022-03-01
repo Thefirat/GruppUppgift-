@@ -36,7 +36,7 @@ function Products({ addProduct }) {
             <h2>{product.title}</h2>
             <h4>{product.price} SEK</h4>
             <input type="number" min="1" max="10" placeholder="quantity"></input>
-            <button onClick={() => handleClick(product)}>Add to Cart</button>
+            <button onClick={() => {handleClick(product)}}>Add to Cart</button>
 
 
           </section>

@@ -54,6 +54,11 @@
 .logo{
 	color: rgb(46, 45, 45);
 	text-align: center;
+	text-decoration: none;
+}
+
+.logo :hover{
+	color: rgba(189, 129, 129, 0.667);;
 }
 
 .slide-menu :hover{

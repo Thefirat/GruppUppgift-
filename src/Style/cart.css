@@ -1,9 +1,21 @@
 .cart-container{
+    position: fixed; 
+    top: 7rem;
+    right: 0;
+    height: 100%;
+    transition: 500ms;
+    transform: translateX(100%);  
+    overflow: scroll; 
     background-color: rgb(245, 250, 252);
     color: rosybrown;
     width: 35rem;
     float: right;
 
+}
+
+.empty{
+    text-align: center;
+    margin-top: 50px;
 }
 
 .cart-img{
@@ -13,8 +25,9 @@
 }
 
  .cart-header{
+    margin: 3rem;
     display: flex;
-    justify-content: space-around;
+    gap: 13rem;
     height: 5rem;
     width: 100%;
 } 
@@ -28,11 +41,13 @@
 }
 
 .cart-body{
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
 }
 
 .cart-items{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
