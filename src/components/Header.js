@@ -9,7 +9,7 @@ function Header({items, countCartItems, setOpen}) {
     <div>
         <div className="container">
           <div className="header-bar">
-            <Link to="/" className='logo'><h1 class="">G-Seven Tech</h1></Link>
+            <Link to="/" className='logo'><h1>G-Seven Tech</h1></Link>
             <div class="slider-menu"> 
             {''}
               {countCartItems ? (
