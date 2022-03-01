@@ -16,6 +16,7 @@ import Products from './pages/Products';
 
 function App() {
 const [items, setItems] =useState([]);
+const[open, setOpen] = useState(false)
 
 const addProduct = (newItem) => {
 setItems([
@@ -24,13 +25,15 @@ setItems([
 
 ]);
 
+
+
 }
 
 
   return (
     <div className="App">
       <BrowserRouter>
-      <Header items={items}/>
+      <Header countCartItems={items.length} items={items} setOpen={setOpen}/>
     
         <Routes>
         <Route path="/" element={<Products addProduct={addProduct}/>}></Route>

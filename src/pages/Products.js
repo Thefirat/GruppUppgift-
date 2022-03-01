@@ -34,9 +34,9 @@ function Products({ addProduct }) {
           <section key={product.id}className="section">
             <Link to={`/product/${product.id}`}> <img className="img" src={product.url} alt={product.title}></img></Link>
             <h2>{product.title}</h2>
-            <h4>{product.price} Kr</h4>
+            <h4>{product.price} SEK</h4>
             <input type="number" min="1" max="10" placeholder="quantity"></input>
-            <button onClick={() => handleClick(product)}>Add to Cart</button>
+            <button onClick={() => {handleClick(product)}}>Add to Cart</button>
 
 
           </section>

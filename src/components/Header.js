@@ -4,13 +4,22 @@ import '../Style/header.css'
 import { FaShoppingCart } from 'react-icons/fa';
 import Cart from './Cart';
 
-function Header({items}) {
+function Header({items, countCartItems, setOpen}) {
   return (
     <div>
         <div className="container">
           <div className="header-bar">
-            <Link to="/"><h1 class="logo">G-Seven Tech</h1></Link>
-            <Link to="/Checkout" class="slider-menu"><FaShoppingCart /></Link>
+            <Link to="/" className='logo'><h1 class="">G-Seven Tech</h1></Link>
+            <div class="slider-menu"> 
+            {''}
+              {countCartItems ? (
+                <button className='countBtn'>{countCartItems}</button>
+              ) : 
+                ''
+              }
+              <button onClick={() => setOpen(true)}><FaShoppingCart /></button>
+              </div>
+            
             <Cart items={items}/>
           </div>
 
