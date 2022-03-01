@@ -8,7 +8,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 function Footer() {
   return (
     <footer className='footer-container'>
-      <h3 className='logo'>G-Seven Tech</h3>
+      <h3 className='logo-footer'>G-Seven Tech</h3>
       <div className='about'>
         <h4>About us</h4>
         <p className='text'>
