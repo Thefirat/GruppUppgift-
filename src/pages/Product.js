@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom'
 
 
 
-function Product() {
+function Product({addProduct}) {
     const [product, setproduct] = useState({});
     const params = useParams();
 
@@ -22,17 +22,23 @@ function Product() {
 
     useEffect(() => {
         fetchData();
-    },[]);
+    }, []);
+
+    const handleClick = (product) => {
+        addProduct(product)
+      }
+
+    
 
 
     return (
-           <section className='product-add'>
+           <section key={product.id} className='product-add'>
             <img className='img-add' alt='Bild' src={product.url}></img>
             <h1 className='title-add'>{product.title}</h1>
             <p className='desc-add'>{product.description}</p>
             <h2 className='price-add'>Price:{product.price}</h2>
             <h3 className='storage-add'>Storage:{product.storage}</h3>
-            <button>Add to Cart</button>
+            <button onClick={() => handleClick(product)}>Add to Cart</button>
            </section>
     )
 }

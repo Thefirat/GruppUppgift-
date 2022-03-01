@@ -1,14 +1,19 @@
 import React from 'react'
+import '../Style/checkout.css'
 
 function Checkout() {
   return (
-    <div>
-      <h1>Checkout</h1>
-      <table>
-        deasdads
-      </table>
-      
-    </div>
+  <div>
+       <div className='checkoutBody'>
+         <li>1</li>
+         <li>1</li>
+          <li>1</li> 
+          <li>1</li> 
+          <li>1</li> 
+          <li>1</li>
+       </div>
+       
+  </div>
   )
 }
 

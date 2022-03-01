@@ -4,7 +4,7 @@
   border: 2px solid black;
   display: flex;
   gap: 15rem;
- 
+  
 }
 
 
@@ -18,3 +18,10 @@
   width: 275px;
 }
 
+
+.logo{
+  margin-left: 4rem;
+  margin-top: 4rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+}
