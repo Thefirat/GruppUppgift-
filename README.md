@@ -69,4 +69,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
- 
+ det här ska in i Cart 
+   {/* {items.map(item => (
+          <section className="cart-section" key={item.id}>
+            <div className='cart-body'>
+              <img className="cart-img" src={item.url} alt={item.title}></img>
+
+              <div className='cart-items'>
+                <h3>{item.title}</h3>
+                <h4>{item.price} SEK</h4>
+                <button>+</button>
+                <button>-</button>
+              </div>
+              <button onClick={hadleDeleteBtn}className='cart-trash'><FaTrash /></button> 
+            </div>
+          </section>
+
+        ))}  */}

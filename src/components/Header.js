@@ -4,7 +4,7 @@ import '../Style/header.css'
 import { FaShoppingCart } from 'react-icons/fa';
 import Cart from './Cart';
 
-function Header({items, countCartItems, setOpen, deleteItem}) {
+function Header({items, countCartItems, setOpen, setItems }) {
   return (
     <div>
         <div className="container">
@@ -19,9 +19,9 @@ function Header({items, countCartItems, setOpen, deleteItem}) {
               <button onClick={() => setOpen(true)}><FaShoppingCart /></button>
               </div>
             
-            <Cart items={items}
-            deleteItem={deleteItem} 
-            
+            <Cart
+             items={items}
+             setItems={setItems}
             />
           </div>
 

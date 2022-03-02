@@ -1,28 +1,23 @@
 import React from "react"
 import '../Style/cart.css'
-import { FaTrash, FaWindowClose } from 'react-icons/fa';
+import { FaWindowClose } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import CartItem from "./CartItem";
 
 
 
-function Cart({items, deleteItem}) {
 
-  
+function Cart({items, setItems}) {
 
+  const deleteItem = (id) => {
+    console.log( 'cart ->deleteItem ')
+    console.log('ID:' + id);
 
-  const hadleDeleteBtn = () => {
-
-    console.log('item -> hadleDeleteBtn()')
-    console.log(items)
-
-     
-
-    deleteItem(items.id);
-
-  }
+    let removeItem = items.filter(item => item.id !== id)
+    setItems(removeItem)  
+    
+  }  
    
-
-
 
   return (
     <>
@@ -32,30 +27,19 @@ function Cart({items, deleteItem}) {
           <h2>ORDER SUMMARY</h2>
           <div className='closeBtn'><FaWindowClose /></div>
         </div>
-        <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
-        {items.map(item => (
-          <section className="cart-section" key={item.id}>
-            <div className='cart-body'>
-              <img className="cart-img" src={item.url} alt={item.title}></img>
-
-              <div className='cart-items'>
-                <h3>{item.title}</h3>
-                <h4>{item.price} SEK</h4>
-                <button>+</button>
-                <button>-</button>
-              </div>
-              <button onClick={hadleDeleteBtn}className='cart-trash'><FaTrash /></button> 
-            </div>
-          </section>
-
-        ))}
+         <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
+         {
+         
+         items.map( (item) => <CartItem key={item.id} items={items} item={item} deleteItem={deleteItem}/>
+         )
+         }
 
         <div className='cart-footer'>
           <h3>TOTAL: SEK</h3>
           <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
         </div>
       </div>
-
+    
     </>
   )
 
