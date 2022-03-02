@@ -4,11 +4,11 @@
     right: 0;
     height: 100%;
     transition: 500ms;
-    transform: translateX(100%); 
+    /* transform: translateX(100%);  */
     overflow: scroll; 
     background-color: rgb(245, 250, 252);
     color: rosybrown;
-    width: 35rem;
+    width: 36rem;
     float: right;
 
 }
@@ -34,8 +34,12 @@
 
 .closeBtn{
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
     
     
 }
@@ -71,6 +75,6 @@
     display: flex;
     width: 80%;
     height: 20%;
-    align-items: center;
-    text-align: center;
+    
+
 }

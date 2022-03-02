@@ -28,9 +28,6 @@ function Product({addProduct}) {
         addProduct(product)
       }
 
-    
-
-
     return (
            <section key={product.id} className='product-add'>
             <img className='img-add' alt='Bild' src={product.url}></img>
