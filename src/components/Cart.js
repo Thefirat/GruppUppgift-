@@ -10,11 +10,9 @@ import CartItem from "./CartItem";
 function Cart({ items, setItems, open, setOpen, sum, deleteAll }) {
 
   const deleteItem = (id) => {
-
     let inCart = items.filter(item => item.id !== id)
 
     setItems(inCart)
-    console.log(inCart)
 
   }
 
