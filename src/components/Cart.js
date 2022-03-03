@@ -7,48 +7,50 @@ import CartItem from "./CartItem";
 
 
 
-function Cart({items, setItems, open, setOpen}) {
+function Cart({ items, setItems, open, setOpen, sum }) {
 
   const deleteItem = (id) => {
-    
+
 
     let inCart = items.filter(item => item.id !== id)
-   
+
     setItems(inCart)
 
+  }
 
-    
-  }  
-   
 
   return (
     <>
 
-  <div className={`cart-container ${open && 'open'}`}>
+      <div className={`cart-container ${open && 'open'}`}>
         <div className='cart-header'>
           <h2>ORDER SUMMARY</h2>
           <div className='closeBtn' onClick={() => setOpen(!open)}><FaWindowClose /></div>
         </div>
-         <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
-         <div className="products-cart-container">
+        <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
+        <div className="product-cart-container">
           {
-          
-          items.map( (item) =>
-          <CartItem
-          key={item.id} 
-          items={items} 
-          item={item} 
-          deleteItem={deleteItem}/>
-          )
+            items.map((item) =>
+              <CartItem
+                key={item.id}
+                items={items}
+                item={item}
+                deleteItem={deleteItem}
+    
+
+              />
+            )
           }
-         </div>
+        </div>
 
         <div className='cart-footer'>
-          <h3>TOTAL: SEK</h3>
+          <h3>TOTAL:  {sum} SEK</h3>
           <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
+          
         </div>
+        <button className='cart-delete'></button>
       </div>
-    
+
     </>
   )
 
