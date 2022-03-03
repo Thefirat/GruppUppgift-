@@ -5,7 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import Cart from './Cart';
 
 
-function Header({items, countCartItems, setItems, sum}) {
+function Header({items, countCartItems, setItems, sum, deleteAll}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -30,6 +30,7 @@ function Header({items, countCartItems, setItems, sum}) {
              open = {open}
              setOpen = {setOpen}
              sum={sum}
+             deleteAll={deleteAll}
             />
           
 

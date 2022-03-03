@@ -7,15 +7,22 @@ import CartItem from "./CartItem";
 
 
 
-function Cart({ items, setItems, open, setOpen, sum }) {
+function Cart({ items, setItems, open, setOpen, sum, deleteAll }) {
 
   const deleteItem = (id) => {
-
 
     let inCart = items.filter(item => item.id !== id)
 
     setItems(inCart)
+    console.log(inCart)
 
+  }
+
+   
+  const hadleDeleteAll = () => {
+         
+    deleteAll()
+   
   }
 
 
@@ -36,7 +43,6 @@ function Cart({ items, setItems, open, setOpen, sum }) {
                 items={items}
                 item={item}
                 deleteItem={deleteItem}
-    
 
               />
             )
@@ -44,11 +50,11 @@ function Cart({ items, setItems, open, setOpen, sum }) {
         </div>
 
         <div className='cart-footer'>
-          <h3>TOTAL:  {sum} SEK</h3>
+          <h3>TOTAL: {sum} SEK</h3>
           <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
           
         </div>
-        <button className='cart-delete'></button>
+        <button onClick={hadleDeleteAll} className='cart-delete'>Remove all</button>
       </div>
 
     </>

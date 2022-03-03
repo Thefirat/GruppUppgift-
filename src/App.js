@@ -33,6 +33,12 @@ function App() {
   
   }  
 
+  const deleteAll = () => {
+
+    setItems([]);
+   
+  } 
+
   
   
   return (
@@ -43,6 +49,9 @@ function App() {
            countCartItems={items.length}
            setItems={setItems}
            sum={sum}
+           deleteAll={deleteAll}
+           
+          
         />
         <Routes>
           <Route path="/" element={<Products setSum={setSum} addProduct={addProduct} />}></Route>

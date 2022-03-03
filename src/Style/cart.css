@@ -76,8 +76,24 @@
 
 .cart-checkout{
     display: flex;
-    width: 45%;
-    height: 1.3rem;
-    
+    width: 40%;
+    height: 1.3rem;  
 
+}
+
+.cart-delete{
+    display: flex;
+    position: absolute;
+    right: 25px;
+    margin-left: 50px;
+    width: 20%;
+    height: 1.3rem;  
+}
+
+.plusBtn{
+    width: 30px;
+}
+
+.minusBtn{
+    width: 30px;
 }

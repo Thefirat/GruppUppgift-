@@ -4,13 +4,13 @@ import { FaTrash } from 'react-icons/fa';
 function CartItem({item, deleteItem}) {
 
     const hadleDeleteBtn = () => {
-
-        console.log('item -> hadleDeleteBtn()')
-        console.log(item)
     
         deleteItem(item.id);
+        console.log(hadleDeleteBtn);
     
       } 
+
+     
 
   return (
     <div>
@@ -22,8 +22,8 @@ function CartItem({item, deleteItem}) {
               <div className='cart-items'>
                 <h3>{item.title}</h3>
                 <h4>{item.price} SEK</h4>
-                <button>+</button>
-                <button>-</button>
+                <button className='plusBtn'>+</button>
+                <button className='minusBtn'>-</button>
               </div>
                <button onClick={hadleDeleteBtn} className='cart-trash'><FaTrash /></button>  
             </div>
