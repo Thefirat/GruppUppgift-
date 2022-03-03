@@ -39,7 +39,7 @@ function App() {
    
   } 
 
-  
+   
   
   return (
     <div className="App">
@@ -53,12 +53,12 @@ function App() {
            
           
         />
+
         <Routes>
           <Route path="/" element={<Products setSum={setSum} addProduct={addProduct} />}></Route>
           <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
-          <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct} />}></Route>
         </Routes>
-
         <Footer />
       </BrowserRouter>
     </div >

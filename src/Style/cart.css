@@ -13,6 +13,11 @@
 
 } 
 
+.products-cart-container {
+    overflow: scroll;
+    max-height: 60vh;
+}
+
 .cart-container.open {
     transform: translateX(0); 
     height: calc(100% - 6.5rem);
