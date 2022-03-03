@@ -13,9 +13,8 @@ import Products from './pages/Products';
 
 
 function App() {
-   const [items, setItems] = useState([]);   
-  /* const [sum, setSum] = useState(undefined)
-  const [open, setOpen] = useState(false) */
+   const [items, setItems] = useState([]);  
+   const [sum, setSum] = useState (0);
 
     const addProduct = (newItem) => {
 
@@ -24,9 +23,16 @@ function App() {
       newItem
 
     ]);
+
+
+    if (sum === 0) {
+      setSum(newItem.price)
+  } else {
+      setSum(sum + newItem.price)
+  }
   
   }  
- 
+
   
   
   return (
@@ -36,13 +42,10 @@ function App() {
            items={items} 
            countCartItems={items.length}
            setItems={setItems}
-           /* setOpen={setOpen}  */
-         /*  sum={sum}
-          setSum={setSum} */
-
+           sum={sum}
         />
         <Routes>
-          <Route path="/" element={<Products addProduct={addProduct} />}></Route>
+          <Route path="/" element={<Products setSum={setSum} addProduct={addProduct} />}></Route>
           <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
           <Route path="/checkout" element={<Checkout />}></Route>
         </Routes>
