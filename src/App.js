@@ -18,6 +18,7 @@ function App() {
   const [open, setOpen] = useState(false) */
 
     const addProduct = (newItem) => {
+
     setItems([
       ...items,
       newItem
@@ -25,7 +26,8 @@ function App() {
     ]);
   
   }  
-
+ 
+  
   
   return (
     <div className="App">
@@ -33,6 +35,7 @@ function App() {
         <Header
            items={items} 
            countCartItems={items.length}
+           setItems={setItems}
            /* setOpen={setOpen}  */
          /*  sum={sum}
           setSum={setSum} */

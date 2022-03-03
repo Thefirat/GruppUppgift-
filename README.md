@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
- det här ska in i Cart 
+ det här ska in i Cart i ordinarie version utan cartItem
    {/* {items.map(item => (
           <section className="cart-section" key={item.id}>
             <div className='cart-body'>
@@ -86,3 +86,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
           </section>
 
         ))}  */}
+
+        med cartItem ska det här in i cart
+
+         <div className='cart-container'>
+        <div className='cart-header'>
+          <h2>ORDER SUMMARY</h2>
+          <div className='closeBtn'><FaWindowClose /></div>
+        </div>
+         <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
+         {
+         
+         items.map( (item) => <CartItem key={item.id} items={items} item={item} deleteItem={deleteItem}/>
+         )
+         }
+
+        <div className='cart-footer'>
+          <h3>TOTAL: SEK</h3>
+          <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
+        </div>
+      </div>

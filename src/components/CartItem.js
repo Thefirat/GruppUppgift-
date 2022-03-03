@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaTrash } from 'react-icons/fa';
 
-function CartItem({items, item, deleteItem}) {
+function CartItem({item, deleteItem}) {
 
     const hadleDeleteBtn = () => {
 

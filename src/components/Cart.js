@@ -7,14 +7,16 @@ import CartItem from "./CartItem";
 
 
 
-function Cart({items, setItems}) {
+function Cart({items, setItems, open, setOpen}) {
 
   const deleteItem = (id) => {
-    console.log( 'cart ->deleteItem ')
-    console.log('ID:' + id);
+    
 
-    let removeItem = items.filter(item => item.id !== id)
-    setItems(removeItem)  
+    let inCart = items.filter(item => item.id !== id)
+   
+    setItems(inCart)
+
+
     
   }  
    
@@ -22,15 +24,20 @@ function Cart({items, setItems}) {
   return (
     <>
 
-      <div className='cart-container'>
+  <div className={`cart-container ${open && 'open'}`}>
         <div className='cart-header'>
           <h2>ORDER SUMMARY</h2>
-          <div className='closeBtn'><FaWindowClose /></div>
+          <div className='closeBtn' onClick={() => setOpen(!open)}><FaWindowClose /></div>
         </div>
          <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
          {
          
-         items.map( (item) => <CartItem key={item.id} items={items} item={item} deleteItem={deleteItem}/>
+         items.map( (item) =>
+        <CartItem
+         key={item.id} 
+         items={items} 
+         item={item} 
+         deleteItem={deleteItem}/>
          )
          }
 

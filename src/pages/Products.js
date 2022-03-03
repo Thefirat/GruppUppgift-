@@ -24,10 +24,10 @@ function Products({ addProduct }) {
 
   const handleClick = (product) => {
     addProduct(product)
-    console.log(handleClick);
+    console.log(product);
   }
 
-
+  
 
 
   return (
