@@ -6,17 +6,41 @@
 }
 
 
-input{
+.checkout-input {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#chekout-form{
+    padding: 1rem;
+    width: auto;
     
 }
 
+
+.wrapper {
+    display: flex;
+}
+
+
+.wrapper > * {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (max-width: 767) {
+    .wrapper {
+        flex-wrap: wrap;
+
+    }
+
+    .wrapper > * {
+        width: 100%;
+    }
+}
 
 
 
@@ -34,3 +58,17 @@ input{
 
 
    
+.chekout-bild{
+    width: 423px;
+    margin-top: 200px;
+    padding: 150px;
+    height: auto;
+    border: 0;
+    
+}
+
+.chekout-tr{
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+}

@@ -41,8 +41,7 @@
 
 .slider-menu {
 	font-size: 1.5rem;
-	color: rgb(46, 45, 45);
-	position: absolute;  
+	color: rgb(46, 45, 45); 
 	top: 1rem;
 	right: 1rem;
 	display: flex; 

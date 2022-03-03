@@ -1,47 +1,54 @@
 import React from "react"
 import '../Style/cart.css'
+import { FaWindowClose } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import CartItem from "./CartItem";
 
-import { FaTrash, FaWindowClose } from 'react-icons/fa';
 
 
 
-function Cart({ items }) {
+function Cart({items, setItems, open, setOpen}) {
 
+  const deleteItem = (id) => {
+    
+
+    let inCart = items.filter(item => item.id !== id)
+   
+    setItems(inCart)
+
+
+    
+  }  
+   
 
   return (
     <>
 
-      <div className='cart-container'>
+  <div className={`cart-container ${open && 'open'}`}>
         <div className='cart-header'>
           <h2>ORDER SUMMARY</h2>
-          <div className='closeBtn'><FaWindowClose/></div>
+          <div className='closeBtn' onClick={() => setOpen(!open)}><FaWindowClose /></div>
         </div>
-        <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
-        {items.map(item => (
-          <section className="cart-section" key={item.id}>
-            <div className='cart-body'>
-              <img className="cart-img" src={item.url} alt={item.title}></img>
-
-              <div className='cart-items'>
-                <h3>{item.title}</h3>
-                <h4>{item.price} SEK</h4>
-                <button>+</button>
-                <button>-</button>
-              </div>
-              <button className='cart-trash'><FaTrash /></button>
-            </div>
-          </section>
-
-        ))
-
-        }
+         <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
+         <div className="products-cart-container">
+          {
+          
+          items.map( (item) =>
+          <CartItem
+          key={item.id} 
+          items={items} 
+          item={item} 
+          deleteItem={deleteItem}/>
+          )
+          }
+         </div>
 
         <div className='cart-footer'>
-          <h3>TOTAL</h3>
-          <button className='cart-checkout'>Checkout</button>
+          <h3>TOTAL: SEK</h3>
+          <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
         </div>
-
       </div>
+    
     </>
   )
 

@@ -12,45 +12,43 @@ import Header from './components/Header';
 import Products from './pages/Products';
 
 
-
-
 function App() {
-const [items, setItems] =useState([]);
-const[open, setOpen] = useState(false)
+   const [items, setItems] = useState([]);   
+  /* const [sum, setSum] = useState(undefined)
+  const [open, setOpen] = useState(false) */
 
-const addProduct = (newItem) => {
-setItems([
-  ...items,
-  newItem
+    const addProduct = (newItem) => {
 
-]);
+    setItems([
+      ...items,
+      newItem
 
+    ]);
+  
+  }  
 
-
-}
-
-
+   
+  
   return (
     <div className="App">
       <BrowserRouter>
-      <Header countCartItems={items.length} items={items} setOpen={setOpen}/>
-    
+        <Header
+           items={items} 
+           countCartItems={items.length}
+           setItems={setItems}
+           /* setOpen={setOpen}  */
+         /*  sum={sum}
+          setSum={setSum} */
+
+        />
+
         <Routes>
-        <Route path="/" element={<Products addProduct={addProduct}/>}></Route>
-        <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
-        <Route path="/checkout" element={<Checkout addProduct={addProduct} />}></Route>
-      </Routes>
-      <Footer addProduct={addProduct}/>     
-    </BrowserRouter>
-
-   
-
-  
-
-
-
-      
-
+          <Route path="/" element={<Products addProduct={addProduct} />}></Route>
+          <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
+          <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct} />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div >
   );
 }
