@@ -1,74 +1,136 @@
-
-.checkoutBody{
-    margin-top: 9rem;
-    border: 1px black;
-    height: 20rem;
-}
-
-
-.checkout-input {
+/* #chekout-form {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
+} */
 
-#chekout-form{
+ #chekout-form{
     padding: 1rem;
-    width: auto;
-    
+    width: 400px;
+    height: 2px;    
+} 
+
+
+
+
+
+.chekout-c-btn{
+    padding: 14px 20px;
+    margin: 30px 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 250px; 
+    height: 100px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: none;
+    background-color: rgba(189, 129, 129, 0.667);
+    font-size: 20px;   
+}
+
+.c-btn:hover{
+    padding-right: 30px;
+    border-radius: 70px;
+  }
+
+
+.no-products-container{
+    margin:160px 600px;
+}
+
+.no-products-text{
+    margin-left: 20px;
+}
+
+.home-chekout-btn{
+    width: 250px; 
+    height: 100px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: none;
+    background-color: rgba(189, 129, 129, 0.667);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.home-chekout-btn:hover{
+    padding-right: 30px;
+    border-radius: 70px;
 }
 
 
-.wrapper {
+
+
+/*Product*/
+
+
+.parent-all{
+    flex-wrap: wrap;
     display: flex;
 }
 
 
-.wrapper > * {
+.parent-all > div {
+    width: 50%;
+}
+
+
+.sum {
     width: 100%;
-    height: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 140px; 
+    margin-left: 50px;
 }
 
 
-
-@media screen and (max-width: 767) {
-    .wrapper {
-        flex-wrap: wrap;
-
-    }
-
-    .wrapper > * {
-        width: 100%;
-    }
+.checkout-name{
+    margin-top: 120px;
 }
 
 
-
-.c-btn{
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-
-   
 .chekout-bild{
-    width: 423px;
-    margin-top: 200px;
-    padding: 150px;
-    height: auto;
-    border: 0;
-    
+    width: 200px;
+    height: 200px;
 }
 
-.chekout-tr{
-    flex-grow: 0;
-    max-width: 100%;
-    flex-basis: 100%;
+
+
+
+.input-chekout-container{
+    display: flex;
+    flex-direction:column;
+    margin-top: 120px;      
 }
+
+.chekout-pay-part{
+    margin-top: 75px;
+    margin-left: 100px;
+}
+
+
+.checkout-delivery-part
+{
+    margin-top: 75px;
+    margin-left: 100px;
+}
+
+
+
+.icon-footer-2{
+    color:rgba(189, 129, 129, 0.667);
+    gap: 50px;
+    font-size: 30px;
+}
+
+.i-title{
+    margin-left: 100px;
+}
+
+.i-price{
+    margin-left: 140px;
+}
+
+
+
+
+
+

@@ -1,9 +1,10 @@
 .footer-container{
-  height: 15rem;
+  height: 10rem;
   margin-top: 80px;
-  border: 2px solid black;
+  border-top: 1px solid rgb(46, 45, 45);
   display: flex;
-  gap: 15rem;
+  gap: 6rem;
+  width: 100%;
   
 }
 
@@ -11,17 +12,31 @@
 .social{
   display: flex;
   gap: 20px;
+  font-size: 30px;
+  
 
 }
 
 .text{
-  width: 275px;
+  width: 350px;
 }
 
 
 .logo-footer{
   margin-left: 4rem;
-  margin-top: 4rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px;
+  text-decoration: none;
+  color:rgba(189, 129, 129, 0.667);
+}
+
+.logo-footer:hover{
+  color:rgb(46, 45, 45);
+}
+
+.icon-footer{
+  color:rgba(189, 129, 129, 0.667) ;
+}
+
+.icon-footer:hover{
+  color:rgb(46, 45, 45);
 }

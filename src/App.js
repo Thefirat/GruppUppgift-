@@ -10,6 +10,7 @@ import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Products from './pages/Products';
+import Finish from "./pages/Finish";
 
 
 function App() {
@@ -49,9 +50,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Products setSum={setSum} addProduct={addProduct} />}></Route>
           <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
-          <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct} />}></Route>
+          <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct} sum={sum} />}></Route>
+          <Route path="/finish" element={<Finish />} />
         </Routes>
         <Footer />
+
+        
       </BrowserRouter>
     </div >
   );

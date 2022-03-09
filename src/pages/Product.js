@@ -30,12 +30,17 @@ function Product({ addProduct }) {
 
     return (
         <section key={product.id} className='product-add'>
-            <img className='img-add' alt='Bild' src={product.url}></img>
-            <h1 className='title-add'>{product.title}</h1>
-            <p className='desc-add'>{product.description}</p>
-            <h3 className='price-add'>Price:{product.price}</h3>
-            <h4 className='storage-add'>Storage:{product.storage}</h4>
-            <button className='btn-add' onClick={() => handleClick(product)}>Add to Cart</button>
+            <section>
+                <img className='img-add' alt='Bild' src={product.url}></img>
+            </section>
+
+            <section>
+                <h1 className='title-add'>{product.title}</h1>
+                <p className='desc-add'>{product.description}</p>
+                <h3 className='price-add'>Price:{product.price}</h3>
+                <h4 className='storage-add' id='storage-id'>Storage:{product.storage}</h4>
+                <button className='btn-add' onClick={() => handleClick(product)}>Add to Cart</button>
+            </section>
         </section>
     )
 }

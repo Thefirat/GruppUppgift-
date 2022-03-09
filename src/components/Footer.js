@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Style/footer.css'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,7 +9,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 function Footer() {
   return (
     <footer className='footer-container'>
-      <h3 className='logo-footer'>G-Seven Tech</h3>
+      <Link to='/' className='logo-footer'><h3>G-Seven Tech</h3></Link>
       <div className='about'>
         <h4>About us</h4>
         <p className='text'>
@@ -21,9 +22,9 @@ function Footer() {
         <h4>Contact</h4>
         
           <div className='social'>
-          <a href='https://sv-se.facebook.com/'><FaFacebook/></a>
-          <a href='https://www.instagram.com/'><FaInstagram/></a>
-          <a href='https://www.youtube.com/watch?v=WnBP8sIUShg'><FaYoutube/></a>
+          <a href='https://sv-se.facebook.com/' className='icon-footer'><FaFacebook/></a>
+          <a href='https://www.instagram.com/' className='icon-footer'><FaInstagram/></a>
+          <a href='https://www.youtube.com/watch?v=WnBP8sIUShg' className='icon-footer'><FaYoutube/></a>
           </div>
       
       </div>
