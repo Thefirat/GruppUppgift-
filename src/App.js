@@ -16,9 +16,18 @@ import Finish from "./pages/Finish";
 function App() {
    const [items, setItems] = useState([]);  
    const [quantity, setQuantity] = useState(1);
+   const [sum, setSum] = useState (0);
+   
 
     const addProduct = (newItem) => {
 
+
+      if (sum === 0) {
+        setSum(newItem.price)
+    } else {
+        setSum(sum + newItem.price)
+    }
+ 
 
       newItem = Object.assign({}, {...newItem}, {quantity : quantity})
 
@@ -28,6 +37,8 @@ function App() {
 
       ]);
   }
+
+  
    
 
 
