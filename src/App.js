@@ -15,27 +15,30 @@ import Finish from "./pages/Finish";
 
 function App() {
    const [items, setItems] = useState([]);  
-   const [sum, setSum] = useState (0);
+   const [quantity, setQuantity] = useState(1);
 
     const addProduct = (newItem) => {
 
-    setItems([
-      ...items,
-      newItem
 
-    ]);
+      newItem = Object.assign({}, {...newItem}, {quantity : quantity})
 
+      setItems([
+        ...items,
+        newItem
 
-    if (sum === 0) {
-      setSum(newItem.price)
-  } else {
-      setSum(sum + newItem.price)
+      ]);
   }
-  
-  }  
+   
+
+
+
+  const deleteAll = () => {
+
+    setItems([]);
+   
+  } 
 
    
-  
   
   return (
     <div className="App">
@@ -44,11 +47,14 @@ function App() {
            items={items} 
            countCartItems={items.length}
            setItems={setItems}
-           sum={sum}
+           deleteAll={deleteAll}
+          
+           
+          
         />
 
         <Routes>
-          <Route path="/" element={<Products setSum={setSum} addProduct={addProduct} />}></Route>
+          <Route path="/" element={<Products addProduct={addProduct} />}></Route>
           <Route path="/product/:wie" element={<Product addProduct={addProduct} />} />
           <Route path="/checkout" element={<Checkout items = {items} addProduct={addProduct} sum={sum} />}></Route>
           <Route path="/finish" element={<Finish />} />
@@ -57,8 +63,8 @@ function App() {
 
         
       </BrowserRouter>
-    </div >
+    </div>
   );
 }
 
-export default App;
+export default App

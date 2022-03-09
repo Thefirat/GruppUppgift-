@@ -1,10 +1,10 @@
 .cart-container{
     position: fixed; 
-    overflow: scroll; 
     top: 6.5rem;
     right: 0;
     max-height: 200%;
     transition: 500ms;
+    overflow: scroll; 
     transform: translateX(100%);  
     background-color: rgb(245, 250, 252);
     color: rosybrown;
@@ -13,8 +13,8 @@
 
 } 
 
+
 .products-cart-container {
-    overflow: scroll;
     max-height: 60vh;
 }
 
@@ -28,11 +28,6 @@
     margin-top: 50px;
 }
 
-.cart-img{
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-}
 
  .cart-header{
     margin: 0.5rem;
@@ -49,40 +44,46 @@
     position: absolute;
     top: 0;
     right: 25px;
-    margin-left: 50px;
+    margin-left: 50px; 
     
-    
 }
 
-.cart-body{
-    margin-top: 30px; 
-    display: flex;
-    justify-content: space-around;
+.closeBtn:hover{
+    font-size: 1.8rem;
 }
 
-.cart-items{
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-trash{
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    height: 2rem;
-    width: 2rem;
-}
 
 .cart-footer{
     display: flex;
     flex-direction: column;
+    position: sticky;
+    margin-top: 30px;
     height: 20%;
 }
 
 .cart-checkout{
     display: flex;
-    width: 45%;
-    height: 1.3rem;
-    
+    width: 90%;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 
 }
+
+ .cart-delete{
+    display: flex;
+    justify-content: center;
+    right: 60px;
+    margin-top: 30px;
+    margin-left: 23rem;
+    width: 20%;
+    height: 1.3rem;   
+}
+ 
+
+
+
+
+
+

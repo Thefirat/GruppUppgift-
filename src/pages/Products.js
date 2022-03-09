@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import '../Style/products.css'
+import { FaShoppingCart } from 'react-icons/fa';
+import {motion} from "framer-motion"
 
 
 function Products({ addProduct }) {
@@ -35,11 +37,23 @@ function Products({ addProduct }) {
       {
         products.map(product => (
           <section key={product.id}className="section">
-            <Link to={`/product/${product.id}`}> <img className="img" src={product.url} alt={product.title}></img></Link>
+            <Link to={`/product/${product.id}`}> <motion.img 
+            animation={{
+              boxShadow:"0px 0px 0px 8px rgb(201, 193, 193)"
+            }}
+            whileHover={{
+             scale:1,
+             textShadow:"0px 0px 0px 8px rgb(255,255,255)",
+             boxShadow:"0px 0px 0px 8px rgb(255,255,255)"
+
+            }}
+            className="img" src={product.url} alt={product.title}></motion.img></Link>
             <h2>{product.title}</h2>
             <h4>{product.price} SEK</h4>
-            <input type="number" min="1" max="10" placeholder="quantity"></input>
-            <button onClick={() => {handleClick(product)}}>Add to Cart</button>
+            <div className="addToCart">
+            <input className="quantityInput" type="number" min="1" max="20" placeholder="quantity"></input>
+            <div className="faProducts" onClick={() => {handleClick(product)}}>< FaShoppingCart/></div>
+            </div>
 
 
           </section>
