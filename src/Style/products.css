@@ -23,3 +23,23 @@
     box-shadow:  0 3px 3px rgba(0,0,0,.2);
     
 }
+
+
+.addToCart{
+    display: flex;
+    gap: 2rem;
+}
+
+.quantityInput{
+    width: 70px;
+}
+
+.faProducts{
+    font-size: 1.2rem;
+}
+
+.faProducts:hover{
+    color: rgba(189, 129, 129, 0.667);;
+	
+    
+}

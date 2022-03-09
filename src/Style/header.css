@@ -42,11 +42,12 @@
 .slider-menu {
 	font-size: 1.5rem;
 	color: rgb(46, 45, 45); 
-	top: 1rem;
-	right: 1rem;
 	display: flex; 
-	gap: 0.5rem;
-	flex-direction: row-reverse;
+	flex-direction: row-reverse;	
+    position: absolute;
+    right: 25px;
+	gap: 5px;
+	margin-top: -6rem; 
 
 }
 
@@ -60,13 +61,20 @@
 	color: rgba(189, 129, 129, 0.667);;
 }
 
-.slide-menu :hover{
+.shopingIcon-header :hover{
 	color: rgba(189, 129, 129, 0.667);;
+	box-shadow:  0 15px 15px rgba(241, 8, 8, 0.2);
+	
+	
+	
 }
 
 .countBtn{
 font-size: 0.7rem;
 height: 1.4rem;
 width: 1.3rem;
+border: none;
 
 }
+
+
