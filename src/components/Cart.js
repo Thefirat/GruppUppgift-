@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import '../Style/cart.css'
 import { FaWindowClose } from 'react-icons/fa';
 import { Link } from "react-router-dom";
@@ -7,24 +7,24 @@ import CartItem from "./CartItem";
 
 
 
-function Cart({ items, setItems, open, setOpen, deleteAll }) {
-const [cartTotal, setCartTotal] = useState(0);
+function Cart({ items, setItems, open, setOpen, deleteAll, qty }) {
+  const [cartTotal, setCartTotal] = useState(0);
 
 
 
 
-useEffect(() => {
-  total()
-  console.log(items)
+  useEffect(() => {
+    total()
+    console.log(items)
   }, [items]);
 
   const total = () => {
-  let totalVal = 0;
-  for (let summa = 0; summa < items.length; summa++){
-    totalVal += items[summa].price;
-  }
+    let totalVal = 0;
+    for (let summa = 0; summa < items.length; summa++) {
+      totalVal += items[summa].price * items[summa].quantity;
+    }
 
-  setCartTotal(totalVal)
+    setCartTotal(totalVal)
   };
 
 
@@ -33,15 +33,15 @@ useEffect(() => {
 
     setItems(inCart)
 
-  } 
-
-  const hadleDeleteAll = () => {
-         
-    deleteAll()
-   
   }
 
-  
+  const hadleDeleteAll = () => {
+
+    deleteAll()
+
+  }
+
+
 
 
   return (
@@ -56,15 +56,14 @@ useEffect(() => {
         <div className="product-cart-container">
           {
             items.map((item) =>
-           
+
               <CartItem
-                key={item.id} 
+                key={item.id}
                 items={items}
                 item={item}
                 deleteItem={deleteItem}
+                qty={item.quantity}
                 
-
-
 
               />
             )
@@ -73,11 +72,11 @@ useEffect(() => {
         <button onClick={hadleDeleteAll} className='cart-delete'>Clear all</button>
 
         <div className='cart-footer'>
-          <h3>TOTAL:{cartTotal} SEK</h3>
+          <h3>TOTAL:{cartTotal * qty} SEK</h3>
           <Link to="/checkout"><button className='cart-checkout'>Checkout</button></Link>
-          
+
         </div>
-        
+
       </div>
 
     </>

@@ -1,10 +1,9 @@
-import React from 'react'
-import { FaTrash } from 'react-icons/fa';
+import React from "react"
+import { FaTrash } from 'react-icons/fa'
 import styled from "styled-components"
 
-function CartItem({ item, deleteItem }) {
+function CartItem({ item, deleteItem, qty}) {
 
-    
 
     const hadleDeleteBtn = () => {
 
@@ -24,15 +23,16 @@ function CartItem({ item, deleteItem }) {
 
                     <div className='cart-items'>
                         <h3>{item.title}</h3>
+                        <h4>{item.price} SEK</h4>
 
-                         <p className='plus-minus'>Quantity: </p> 
+                        <p className='plus-minus'>Quantity:{qty} </p>
 
                         <div className='cartPrice'>
-                        <h4>{item.price} SEK</h4>
-                        <div onClick={hadleDeleteBtn} className='cart-trash'><FaTrash /></div>
+                            <p>{qty} x {item.price} = {qty * item.price} SEK </p>
+                            <div onClick={hadleDeleteBtn} className='cart-trash'><FaTrash /></div>
                         </div>
                     </div>
-                   
+
                 </div>
             </section>
 
