@@ -31,7 +31,7 @@ function Checkout({ items, sum }) {
               {items.map(i => (
                 <table className='checkout-table-parents'>
                   <tr className='chekout-tr'>
-                  <td><img src={i.url} alt="Image" className='chekout-bild'></img></td>
+                  <td><img src={i.url} alt={i.title} className='chekout-bild'></img></td>
                     <td className='checkout-x-text'><h3 className='i-title'>{i.title}</h3></td>
                    <td className='chekout-price'><h4 className='i-price'>{i.price} SEK</h4></td>
                   </tr>
