@@ -3,7 +3,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
-function ProductItem({ addProduct, product, qty, setQty }) {
+function ProductItem({ addProduct, product, qty }) {
   const [quantityInput, setQuantityInput] = useState(1);
   
 
@@ -41,7 +41,6 @@ function ProductItem({ addProduct, product, qty, setQty }) {
         <form onSubmit={(e) => handleSubmit(e, qty)}  >
           <div className="addToCart">
             <input className="quantity-Input" type="number" min="1" value={quantityInput} required onChange={handleChange} ></input>
-            {quantityInput}
             <button className="faProducts">< FaShoppingCart /></button>
           </div>
         </form>

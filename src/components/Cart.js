@@ -21,7 +21,7 @@ function Cart({ items, setItems, open, setOpen, deleteAll, qty }) {
   const total = () => {
     let totalVal = 0;
     for (let summa = 0; summa < items.length; summa++) {
-      totalVal += items[summa].price;
+      totalVal += items[summa].price * items[summa].quantity;
     }
 
     setCartTotal(totalVal)
@@ -55,15 +55,15 @@ function Cart({ items, setItems, open, setOpen, deleteAll, qty }) {
         <div>{items.length === 0 && <h3 className='empty'>Cart is empty</h3>}</div>
         <div className="product-cart-container">
           {
-            items.map((item, i) =>
+            items.map((item) =>
 
               <CartItem
                 key={item.id}
                 items={items}
                 item={item}
                 deleteItem={deleteItem}
-                qty={qty}
-                index={i}
+                qty={item.quantity}
+                
 
               />
             )

@@ -32,7 +32,7 @@ function App() {
         newItem
       ]); 
     }  else {
-      exist.qty += newItem.qty 
+      exist += newItem.quantity
     } 
 
 
@@ -43,8 +43,6 @@ function App() {
       setSum(sum + newItem.price)
     }
     console.log(newItem);
-
-    /* newItem = Object.assign({}, {...newItem}, {quantity : qty})    */
 
 
   }
